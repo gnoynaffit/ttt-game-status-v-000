@@ -16,7 +16,7 @@ win_combinations = [
 ]
 
 def won?(board)
-  win_combinations.each {|win_combo|
+  WIN_COMBINATIONS.each {|win_combo|
     index_0 = win_combo [0]
     index_1 = win_combo [1]
     index_2 = win_combo [2]
@@ -40,6 +40,14 @@ end
 
 def draw?(board)
   if !won?(board) && full?(board)
+    return true
+  else
+    return false
+  end
+end
+
+def over?(board)
+  if won?(board) || full?(board) || draw?(board)
     return true
   else
     return false
