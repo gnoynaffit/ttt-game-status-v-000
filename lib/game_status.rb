@@ -11,6 +11,7 @@ win_combinations = [
   [0, 3, 6],
   [1, 4, 7],
   [2, 5, 8],
+  [0, 4, 8]
   [0, 4, 2],
 ]
 
@@ -45,7 +46,7 @@ def draw?(board)
   end
 end
 
-def winner(board)
+def winner (board)
   index = []
   index = won?(board)
   if index == false
